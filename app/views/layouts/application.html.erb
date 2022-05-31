@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  </head>
+
+  <body>
+  <%= render partial: "shared/navbar" %>
+
+  <div class="container h-100" style="padding-top: 7rem">
+    <div class="card">
+      <div class="card-body">
+        <div class="card-body">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </body>
+</html>

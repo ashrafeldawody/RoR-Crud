@@ -1,0 +1,26 @@
+<div class="card">
+  <div class="card-header">
+    <div class="d-flex justify-content-between">
+      <h3 class="card-title">All Posts</h3>
+      <%= link_to "Create New Post", new_post_path, class:'btn btn-success' %>
+    </div>
+  </div>
+  <div class="card-body">
+
+    <% @posts.each do |post| %>
+      <div class="card mt-5">
+        <div class="card-header">
+          <%= post.title %>
+        </div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p><%= post.description[0..50] %>... <%= link_to "Continue Reading", post_path(post)  %></p>
+
+          </blockquote>
+        </div>
+      </div>
+
+    <% end %>
+  </div>
+</div>
+

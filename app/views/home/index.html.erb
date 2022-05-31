@@ -1,0 +1,9 @@
+<div class="text-center">
+  <h2><%= current_user ?  "Welcome " + current_user.name : "Your Are Not Logged in"%></h2>
+
+  <% if current_user %>
+    <%= form_with url: logout_path %>
+        <input type="submit" value="Logout" class="btn btn-primary">
+    </form>
+  <% end %>
+</div>

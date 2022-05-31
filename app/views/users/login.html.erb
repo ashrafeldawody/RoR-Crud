@@ -1,0 +1,16 @@
+<h1>Login</h1>
+<%= form_with model: @user, url: login_path do |form| %>
+  <div class="form">
+  <%= render partial: "shared/form_errors", locals: { object: form.object } %>
+  <div class="mt-3">
+    <%= form.label :email , class: "form-label" %>
+    <%= form.email_field :email, required: true , class: "form-control" %>
+  </div>
+  <div class="mt-3">
+    <%= form.label :password, class: "form-label" %>
+    <%= form.password_field :password, required: true , class: "form-control" %>
+  </div>
+
+  <%= form.submit "Sign In" , class:"btn btn-primary mt-4 " %>
+<% end %>
+</div>
